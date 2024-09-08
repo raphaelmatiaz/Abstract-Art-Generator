@@ -38,9 +38,9 @@ function generateArt() {
         const width = Math.floor(Math.random() * 300) + 1; //500 = cool
         const height = Math.floor(Math.random() * 300) + 1; //500 = cool
 
-        // X Y Z
-        const X = Math.floor(Math.random() * 80) + 1;
-        const Y = Math.floor(Math.random() * 80) + 1;
+        // Coordinates X Y Z
+        const X = Math.floor(Math.random() * 100) + 1;
+        const Y = Math.floor(Math.random() * 100) + 1;
         const Z = Math.floor(Math.random() * 100) + 1;
 
         // CoinFlip: Gradient vs Single Color

@@ -8,13 +8,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="frame"></div>
-    <button id="myButton">Generate Modern Art Masterpiece</button>
-
+   
+    <h1 id="title">Abstract Art Generator</h1>
     <aside id="controls">
-        <fieldset>
-            <legend>Color</legend>
-            <form id="inputs">
+        <div id="controls-wrapper">
+            <h2>Controls</h2>
+            <br>
+            <h3>Canvas</h3>
+            <fieldset>
+                <legend>Format</legend>
+            
+                <label for="red">Canvas Format</label>
+                <br><br>
+                <input type="radio" name="format" id="square">
+                <label for="square">Square</label>
+                <br>
+                <input type="radio" name="format" id="landscape">
+                <label for="square">Landscape</label>
+                <br>
+                <input type="radio" name="format" id="portrait">
+                <label for="square">Portrait</label>
+                <br>
+                <input type="radio" name="format" id="circle">
+                <label for="square">Circle</label>
+                <br><br>
+            </fieldset>
+            <br>
+            <h3>Shapes</h3>
+            <fieldset>
+                <legend>Color</legend>
+            
                 <label for="red">Red</label>
                 <input type="range" name="red" id="red" min="0" max="255">
                 <p id="r-value" class="range-value-display">50</p>
@@ -27,11 +50,67 @@
                 <label for="alpha">Alpha</label>
                 <input type="range" name="" id="alpha">
                 <p id="a-value" class="range-value-display">50</p>
-            </form>
-        </fieldset>
+            </fieldset>
+            <fieldset>
+                <legend>Position</legend>
+            
+                <label for="x">Horizontal Offset (X)</label>
+                <input type="range" name="x" id="x" min="0" max="255">
+                <p id="r-value" class="range-value-display">50</p>
+                <label for="green">Vertical Offset (Y)</label>
+                <input type="range" name="" id="green">
+                <p id="g-value" class="range-value-display">50</p>
+                <label for="yellow">Depth Offset (Z)</label>
+                <input type="range" name="" id="yellow">
+                <p id="y-value" class="range-value-display">50</p>
+            </fieldset>
+            <fieldset>
+                <legend>Position</legend>
+            
+                <label for="x">Horizontal Offset (X)</label>
+                <input type="range" name="x" id="x" min="0" max="255">
+                <p id="r-value" class="range-value-display">50</p>
+                <label for="green">Vertical Offset (Y)</label>
+                <input type="range" name="" id="green">
+                <p id="g-value" class="range-value-display">50</p>
+                <label for="yellow">Depth Offset (Z)</label>
+                <input type="range" name="" id="yellow">
+                <p id="y-value" class="range-value-display">50</p>
+            </fieldset>
+            <fieldset>
+                <legend>Position</legend>
+            
+                <label for="x">Horizontal Offset (X)</label>
+                <input type="range" name="x" id="x" min="0" max="255">
+                <p id="r-value" class="range-value-display">50</p>
+                <label for="green">Vertical Offset (Y)</label>
+                <input type="range" name="" id="green">
+                <p id="g-value" class="range-value-display">50</p>
+                <label for="yellow">Depth Offset (Z)</label>
+                <input type="range" name="" id="yellow">
+                <p id="y-value" class="range-value-display">50</p>
+            </fieldset>
+            <fieldset>
+                <legend>Position</legend>
+            
+                <label for="x">Horizontal Offset (X)</label>
+                <input type="range" name="x" id="x" min="0" max="255">
+                <p id="r-value" class="range-value-display">50</p>
+                <label for="green">Vertical Offset (Y)</label>
+                <input type="range" name="" id="green">
+                <p id="g-value" class="range-value-display">50</p>
+                <label for="yellow">Depth Offset (Z)</label>
+                <input type="range" name="" id="yellow">
+                <p id="y-value" class="range-value-display">50</p>
+            </fieldset>
+        </div>
 
     </aside>
     
+    <section id="wall">
+        <div id="frame"></div>
+        <button id="myButton">Generate Modern Art Masterpiece</button>
+    </section>
 
 </body>
 </html>
