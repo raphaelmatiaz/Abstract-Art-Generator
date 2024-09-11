@@ -5,112 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Squares</title>
     <script src="main.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
    
-    <h1 id="title">Abstract Art Generator</h1>
-    <aside id="controls">
-        <div id="controls-wrapper">
-            <h2>Controls</h2>
-            <br>
-            <h3>Canvas</h3>
-            <fieldset>
-                <legend>Format</legend>
-            
-                <label for="red">Canvas Format</label>
-                <br><br>
-                <input type="radio" name="format" id="square">
-                <label for="square">Square</label>
-                <br>
-                <input type="radio" name="format" id="landscape">
-                <label for="square">Landscape</label>
-                <br>
-                <input type="radio" name="format" id="portrait">
-                <label for="square">Portrait</label>
-                <br>
-                <input type="radio" name="format" id="circle">
-                <label for="square">Circle</label>
-                <br><br>
-            </fieldset>
-            <br>
-            <h3>Shapes</h3>
-            <fieldset>
-                <legend>Color</legend>
-            
-                <label for="red">Red</label>
-                <input type="range" name="red" id="red" min="0" max="255">
-                <p id="r-value" class="range-value-display">50</p>
-                <label for="green">Green</label>
-                <input type="range" name="" id="green">
-                <p id="g-value" class="range-value-display">50</p>
-                <label for="yellow">Yellow</label>
-                <input type="range" name="" id="yellow">
-                <p id="y-value" class="range-value-display">50</p>
-                <label for="alpha">Alpha</label>
-                <input type="range" name="" id="alpha">
-                <p id="a-value" class="range-value-display">50</p>
-            </fieldset>
-            <fieldset>
-                <legend>Position</legend>
-            
-                <label for="x">Horizontal Offset (X)</label>
-                <input type="range" name="x" id="x" min="0" max="255">
-                <p id="r-value" class="range-value-display">50</p>
-                <label for="green">Vertical Offset (Y)</label>
-                <input type="range" name="" id="green">
-                <p id="g-value" class="range-value-display">50</p>
-                <label for="yellow">Depth Offset (Z)</label>
-                <input type="range" name="" id="yellow">
-                <p id="y-value" class="range-value-display">50</p>
-            </fieldset>
-            <fieldset>
-                <legend>Position</legend>
-            
-                <label for="x">Horizontal Offset (X)</label>
-                <input type="range" name="x" id="x" min="0" max="255">
-                <p id="r-value" class="range-value-display">50</p>
-                <label for="green">Vertical Offset (Y)</label>
-                <input type="range" name="" id="green">
-                <p id="g-value" class="range-value-display">50</p>
-                <label for="yellow">Depth Offset (Z)</label>
-                <input type="range" name="" id="yellow">
-                <p id="y-value" class="range-value-display">50</p>
-            </fieldset>
-            <fieldset>
-                <legend>Position</legend>
-            
-                <label for="x">Horizontal Offset (X)</label>
-                <input type="range" name="x" id="x" min="0" max="255">
-                <p id="r-value" class="range-value-display">50</p>
-                <label for="green">Vertical Offset (Y)</label>
-                <input type="range" name="" id="green">
-                <p id="g-value" class="range-value-display">50</p>
-                <label for="yellow">Depth Offset (Z)</label>
-                <input type="range" name="" id="yellow">
-                <p id="y-value" class="range-value-display">50</p>
-            </fieldset>
-            <fieldset>
-                <legend>Position</legend>
-            
-                <label for="x">Horizontal Offset (X)</label>
-                <input type="range" name="x" id="x" min="0" max="255">
-                <p id="r-value" class="range-value-display">50</p>
-                <label for="green">Vertical Offset (Y)</label>
-                <input type="range" name="" id="green">
-                <p id="g-value" class="range-value-display">50</p>
-                <label for="yellow">Depth Offset (Z)</label>
-                <input type="range" name="" id="yellow">
-                <p id="y-value" class="range-value-display">50</p>
-            </fieldset>
-        </div>
 
-    </aside>
+       
+
+
+        <nav>
+            <div id="logo"></div>
+            <h1 id="title">Abstract Art Generator</h1>
+        </nav>
+        <aside id="controls">
+            <div id="controls-wrapper">
+                <h2>Controls</h2>
+                <br>
+                <h3>Canvas</h3>
+                <fieldset>
+                    <legend>Format</legend>
+        
+                    <input type="radio" name="format" id="landscape" checked>
+                    <label for="landscape">Landscape</label>
+                    <br>
+                    <input type="radio" name="format" id="portrait">
+                    <label for="portrait">Portrait</label>
+                    <br>
+                    <input type="radio" name="format" id="square">
+                    <label for="square">Square</label>
+                    <br>
+                    <input type="radio" name="format" id="circle">
+                    <label for="circle">Circle</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Background Color</legend>
+        
+                    <label for="color">Color</label>
+                    <input type="color" name="background-color" id="background-color" value="#FFFFFF">
+                </fieldset>
+                <br>
+                <h3>Shapes</h3>
+                <fieldset>
+                    <legend>General</legend>
+        
+                    <label for="shapes-amount" title="The number of Shapes that will be generated on canvas">Amount</label>
+                    <input type="range" name="shapes-amount" id="shapes-amount" min="0" max="1000" value="50">
+                    <p id="amount-value" class="range-value-display">50</p>
+                    <label for="max-width">Max-Width</label>
+                    <input type="range" name="max-width" id="max-width" min="0" max="1000">
+                    <p id="max-width-value" class="range-value-display">50</p>
+                    <label for="max-height">Max-Height</label>
+                    <input type="range" name="max-height" id="max-height" min="0" max="1000">
+                    <p id="max-height-value" class="range-value-display">50</p>
+                </fieldset>
+                <fieldset>
+                    <legend>Color (RGBA)</legend>
+        
+                    <label for="red">Red</label>
+                    <input type="range" name="red" id="red" min="0" max="255">
+                    <p id="r-value" class="range-value-display">50</p>
+                    <label for="green">Green</label>
+                    <input type="range" name="" id="green" min="0" max="255">
+                    <p id="g-value" class="range-value-display">50</p>
+                    <label for="blue">Blue</label>
+                    <input type="range" name="" id="blue" min="0" max="255">
+                    <p id="b-value" class="range-value-display">50</p>
+                    <label for="alpha">Alpha</label>
+                    <input type="range" name="" id="alpha" min="0" max="255">
+                    <p id="a-value" class="range-value-display">50</p>
+                </fieldset>
+                <fieldset>
+                    <legend>Position</legend>
+        
+                    <label for="x">Horizontal Offset (X)</label>
+                    <input type="range" name="x" id="x" min="0" max="100">
+                    <p id="x-value" class="range-value-display">50</p>
+                    <label for="y">Vertical Offset (Y)</label>
+                    <input type="range" name="y" id="y" min="0" max="100">
+                    <p id="y-value" class="range-value-display">50</p>
+                    <label for="z">Depth Offset (Z)</label>
+                    <input type="range" name="z" id="z" min="0" max="100">
+                    <p id="z-value" class="range-value-display">50</p>
+                </fieldset>
+                <br><br><br><br><br><br>
+        
+        </aside>
+
+        
+        <section id="wall">
+            <div id="frame"></div>
+            <button id="myButton">Generate Art</button>
+        </section>
     
-    <section id="wall">
-        <div id="frame"></div>
-        <button id="myButton">Generate Modern Art Masterpiece</button>
-    </section>
 
 </body>
 </html>

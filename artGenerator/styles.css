@@ -6,7 +6,7 @@
 
 html {
     font-size: 62.5%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Inter',Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -21,33 +21,72 @@ body {
 
 }
 
-h1 {
-    font-size: 3.2rem;
+nav {
     position: absolute;
-    z-index: 301;
+    z-index: 302;
+    min-width: 100vw;
+    height: 8vh;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid black;
+    border: 1px solid rgba(182, 182, 182, 0.828);
+    box-shadow: 0px 0 20px rgb(202, 202, 202);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    
+}
+
+h1 {
+    position: static;
+    font-size: 4.8rem;
+    left: 10vw;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    /* background-color: red; */
+    background-image: url(media/logo.png);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: center;
+    margin-right: 10px;
+}
+
+#h1-wrapper {
+    background: linear-gradient(pink, blue, red);
+}
+
+fieldset {
+    padding: 10px;
+    border-radius: 1px;
+    border: 1px solid black;
 }
 
 #myButton {
-    background: rgba(red, green, blue, alpha);
+    background-color: rgb(0, 111, 242);
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 700;
     position: relative;
     z-index: 300;
     bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 1px solid black;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 10px;
-    border: 1px solid rgba(182, 182, 182, 0.828);
+    border-radius: 30px;
+    border: 1px solid rgb(0, 153, 255);
 
     box-shadow: 4px 4px 20px rgb(202, 202, 202);
-    padding: 10px;
-    transition: background-color 0.2s, box-shadow 0.5s;
+    padding: 10px 100px;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 #myButton:hover {
     cursor: pointer;
-    background-color: rgba(239, 239, 239, 0.784);
-    box-shadow: 1px 1px 10px black;
+    background-color: rgb(24, 132, 255);
 }
 
 #frame {
@@ -61,22 +100,25 @@ h1 {
 }
 
 #controls {
-    min-width: fit-content;
-    height: 300vh;
+    height: fit-content;
     max-height: 100%;
     overflow: scroll;
-    position: relative;
     z-index: 300;
     background-color: white;
     flex: 1;
     border-right: 1px solid rgb(156, 156, 156);
-    box-shadow: 5px 5px 30px rgb(90, 90, 90);
+    box-shadow: 0px 0 20px rgb(202, 202, 202);
     padding: 20px;
+    top: 8vh;
+    margin-top: 8vh;
 }
 
-#controls-wrapper {
-    position: relative;
-    top: 10%;
+#constorls:last-child {
+    margin-bottom: 1000px;
+}
+
+#aside-wrapper {
+    min-width: fit-content;
 }
 
 #inputs {
@@ -86,9 +128,4 @@ h1 {
 
 #wall {
     flex: 4;
-
-}
-
-#title {
-    position: absolute;
 }
