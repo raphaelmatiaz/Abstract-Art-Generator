@@ -32,7 +32,7 @@ radioSquareShape.addEventListener('input', () => {
 radioCircleShape.addEventListener('input', () => {
     canvas.style.width = '40vw';
     canvas.style.height = '40vw';
-    canvas.style.borderRadius = '100%';
+    canvas.style.borderRadius = '50%';
 })
 
 canvasBackgroundColor.addEventListener('input', () => {
@@ -116,7 +116,235 @@ canvasBackgroundColor.addEventListener('input', () => {
     })
 
 
+    // PRESET CONSTANTS
+    const presetNeonStripes = document.querySelector('#neon-stripes');
+    const presetTallGrass = document.querySelector('#tall-grass');
+    const presetLimbo = document.querySelector('#limbo');
+    const presetSketch = document.querySelector('#sketch');
+    const presetEmoji = document.querySelector('#emoji');
+    const presetAlienDialect = document.querySelector('#alien-dialect');
 
+    // PRESET INPUT-CONTROLS EVENT LISTNERS
+
+    // Neon Stripes Preset
+    presetNeonStripes.addEventListener('input', () => {
+
+        canvas.style.width = '40vw';
+        canvas.style.height = '40vw';
+        canvas.style.borderRadius = '0';
+
+        let presetCanvasBackgroundColor = 'rgb(0, 0, 0)';
+        let presetShapeAmount = 350;
+        let presetMaxWidth = 4;
+        let presetMaxHeight = 800;
+        let presetRed = 255;
+        let presetGreen = 0;
+        let presetBlue = 255;
+        let presetAlpha = 0;
+        let x = 255;
+        let y = 30;
+        let z = 50;
+
+        canvasBackgroundColor.value = presetCanvasBackgroundColor;
+        canvas.style.background = presetCanvasBackgroundColor;
+
+        inputShapeAmount.value = presetShapeAmount;
+        amountValue.textContent = presetShapeAmount;
+
+        inputMaxWidth.value = presetMaxWidth;
+        maxHeightValue.textContent = presetMaxWidth;
+
+        inputMaxHeight.value = presetMaxHeight;
+        maxHeightValue.textContent = presetMaxHeight;
+
+        inputRed.value = presetRed;
+        redValue.textContent = presetRed;
+
+        inputGreen.value = presetGreen;
+        greenValue.textContent = presetGreen;
+
+        inputBlue.value = presetBlue;
+        blueValue.textContent = presetBlue
+
+        inputAlpha.value = presetAlpha;
+        alphaValue.textContent = presetAlpha;
+
+        inputX.value = x;
+        xValue.textContent = x;
+
+        inputY.value = y;
+        yValue.textContent = y;
+
+        inputZ.value = z;
+        zValue.textContent = z;
+
+        generateArt();
+    })
+
+    presetEmoji.addEventListener('input', () => {
+
+        canvas.style.width = '40vw';
+        canvas.style.height = '40vw';
+        canvas.style.borderRadius = '50%';
+
+        let presetCanvasBackgroundColor = 'rgb(251, 223, 121)';
+        let presetShapeAmount = 3;
+        let presetMaxWidth = 100;
+        let presetMaxHeight = 100;
+        let presetRed = 0;
+        let presetGreen = 0;
+        let presetBlue = 0;
+        let presetAlpha = 0;
+        let x = 100;
+        let y = 100;
+        let z = 50;
+
+        canvasBackgroundColor.value = presetCanvasBackgroundColor;
+        canvas.style.background = presetCanvasBackgroundColor;
+
+        inputShapeAmount.value = presetShapeAmount;
+        amountValue.textContent = presetShapeAmount;
+
+        inputMaxWidth.value = presetMaxWidth;
+        maxHeightValue.textContent = presetMaxWidth;
+
+        inputMaxHeight.value = presetMaxHeight;
+        maxHeightValue.textContent = presetMaxHeight;
+
+        inputRed.value = presetRed;
+        redValue.textContent = presetRed;
+
+        inputGreen.value = presetGreen;
+        greenValue.textContent = presetGreen;
+
+        inputBlue.value = presetBlue;
+        blueValue.textContent = presetBlue
+
+        inputAlpha.value = presetAlpha;
+        alphaValue.textContent = presetAlpha;
+
+        inputX.value = x;
+        xValue.textContent = x;
+
+        inputY.value = y;
+        yValue.textContent = y;
+
+        inputZ.value = z;
+        zValue.textContent = z;
+
+        generateArt();
+
+    })
+
+    presetTallGrass.addEventListener('input', () => {
+
+        canvas.style.width = '80%';
+        canvas.style.height = '80%';
+        canvas.style.borderRadius = '0';
+
+        let presetCanvasBackgroundColor = 'rgb(224, 253, 255)';
+        let presetShapeAmount = 575;
+        let presetMaxWidth = 10;
+        let presetMaxHeight = 1000;
+        let presetRed = 0;
+        let presetGreen = 255;
+        let presetBlue = 0;
+        let presetAlpha = 255;
+        let x = 100;
+        let y = 100;
+        let z = 50;
+
+        canvasBackgroundColor.value = presetCanvasBackgroundColor;
+        canvas.style.background = presetCanvasBackgroundColor;
+
+        inputShapeAmount.value = presetShapeAmount;
+        amountValue.textContent = presetShapeAmount;
+
+        inputMaxWidth.value = presetMaxWidth;
+        maxHeightValue.textContent = presetMaxWidth;
+
+        inputMaxHeight.value = presetMaxHeight;
+        maxHeightValue.textContent = presetMaxHeight;
+
+        inputRed.value = presetRed;
+        redValue.textContent = presetRed;
+
+        inputGreen.value = presetGreen;
+        greenValue.textContent = presetGreen;
+
+        inputBlue.value = presetBlue;
+        blueValue.textContent = presetBlue
+
+        inputAlpha.value = presetAlpha;
+        alphaValue.textContent = presetAlpha;
+
+        inputX.value = x;
+        xValue.textContent = x;
+
+        inputY.value = y;
+        yValue.textContent = y;
+
+        inputZ.value = z;
+        zValue.textContent = z;
+
+        generateArt();
+
+    })
+
+    presetLimbo.addEventListener('input', () => {
+
+        canvas.style.width = '80%';
+        canvas.style.height = '80%';
+        canvas.style.borderRadius = '0';
+
+        let presetCanvasBackgroundColor = 'rgb(255, 255, 255)';
+        let presetShapeAmount = 19;
+        let presetMaxWidth = 550;
+        let presetMaxHeight = 525;
+        let presetRed = 0;
+        let presetGreen = 0;
+        let presetBlue = 0;
+        let presetAlpha = 0;
+        let x = 100;
+        let y = 50;
+        let z = 50;
+
+        canvasBackgroundColor.value = presetCanvasBackgroundColor;
+        canvas.style.background = presetCanvasBackgroundColor;
+
+        inputShapeAmount.value = presetShapeAmount;
+        amountValue.textContent = presetShapeAmount;
+
+        inputMaxWidth.value = presetMaxWidth;
+        maxHeightValue.textContent = presetMaxWidth;
+
+        inputMaxHeight.value = presetMaxHeight;
+        maxHeightValue.textContent = presetMaxHeight;
+
+        inputRed.value = presetRed;
+        redValue.textContent = presetRed;
+
+        inputGreen.value = presetGreen;
+        greenValue.textContent = presetGreen;
+
+        inputBlue.value = presetBlue;
+        blueValue.textContent = presetBlue
+
+        inputAlpha.value = presetAlpha;
+        alphaValue.textContent = presetAlpha;
+
+        inputX.value = x;
+        xValue.textContent = x;
+
+        inputY.value = y;
+        yValue.textContent = y;
+
+        inputZ.value = z;
+        zValue.textContent = z;
+
+        generateArt();
+
+    })
 
 // APP CONSTANTS
 const button = document.getElementById('myButton');
