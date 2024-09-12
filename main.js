@@ -1,5 +1,6 @@
 
 // CANVAS CONSTANTS
+const canvas = document.querySelector('#canvas');
 const radioLandscapeShape = document.querySelector('#landscape');
 const radioPortraitShape = document.querySelector('#portrait');
 const radioSquareShape = document.querySelector('#square');
@@ -10,11 +11,32 @@ const canvasFrame = document.querySelector('#frame');
 // CANVAS INPUT-CONTROLS EVENT LISTNERS
 
 radioLandscapeShape.addEventListener('input', () => {
-    canvasFrame.style.width = '100px solid rgba(255, 255, 255, 255)'
+    canvas.style.width = '80%';
+    canvas.style.height = '80%';
+    canvas.style.borderRadius = '0';
+
+})
+
+radioPortraitShape.addEventListener('input', () => {
+    canvas.style.width = '30%';
+    canvas.style.height = '80%';
+    canvas.style.borderRadius = '0';
+})
+
+radioSquareShape.addEventListener('input', () => {
+    canvas.style.width = '40vw';
+    canvas.style.height = '40vw';
+    canvas.style.borderRadius = '0';
+})
+
+radioCircleShape.addEventListener('input', () => {
+    canvas.style.width = '40vw';
+    canvas.style.height = '40vw';
+    canvas.style.borderRadius = '100%';
 })
 
 canvasBackgroundColor.addEventListener('input', () => {
-    document.body.style.backgroundColor = canvasBackgroundColor.value
+    canvas.style.backgroundColor = canvasBackgroundColor.value
 })
 
 // SHAPE CONSTANTS
@@ -184,7 +206,7 @@ function generateArt() {
         newDiv.classList.add('random-square');
 
         // Append new Div to DOM
-        document.body.appendChild(newDiv);
+        canvas.appendChild(newDiv);
 
 }
 }

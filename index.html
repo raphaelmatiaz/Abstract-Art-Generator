@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squares</title>
-    <script src="main.js" defer></script>
-
+    <title>Abstract Art Generator</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
    
@@ -19,7 +20,6 @@
 
 
         <nav>
-            <div id="logo"></div>
             <h1 id="title">Abstract Art Generator</h1>
         </nav>
         <aside id="controls">
@@ -53,54 +53,96 @@
                 <fieldset>
                     <legend>General</legend>
         
-                    <label for="shapes-amount" title="The number of Shapes that will be generated on canvas">Amount</label>
-                    <input type="range" name="shapes-amount" id="shapes-amount" min="0" max="1000" value="50">
-                    <p id="amount-value" class="range-value-display">50</p>
-                    <label for="max-width">Max-Width</label>
-                    <input type="range" name="max-width" id="max-width" min="0" max="1000">
-                    <p id="max-width-value" class="range-value-display">50</p>
-                    <label for="max-height">Max-Height</label>
-                    <input type="range" name="max-height" id="max-height" min="0" max="1000">
-                    <p id="max-height-value" class="range-value-display">50</p>
+                    <div class="flex-row">
+                        <label for="shapes-amount" title="The number of Shapes that will be generated on canvas">Amount</label>
+                        <input type="range" name="shapes-amount" id="shapes-amount" min="0" max="1000" value="50">
+                        <p id="amount-value" class="range-value-display">50</p>
+                    </div>
+                    <div class="flex-row">
+                        <label for="max-width">Max-Width</label>
+                        <input type="range" name="max-width" id="max-width" min="0" max="1000">
+                        <p id="max-width-value" class="range-value-display">50</p>
+                    </div>
+                    <div class="flex-row">
+                        <label for="max-height">Max-Height</label>
+                        <input type="range" name="max-height" id="max-height" min="0" max="1000">
+                        <p id="max-height-value" class="range-value-display">50</p>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>Color (RGBA)</legend>
         
-                    <label for="red">Red</label>
-                    <input type="range" name="red" id="red" min="0" max="255">
-                    <p id="r-value" class="range-value-display">50</p>
-                    <label for="green">Green</label>
-                    <input type="range" name="" id="green" min="0" max="255">
-                    <p id="g-value" class="range-value-display">50</p>
-                    <label for="blue">Blue</label>
-                    <input type="range" name="" id="blue" min="0" max="255">
-                    <p id="b-value" class="range-value-display">50</p>
-                    <label for="alpha">Alpha</label>
-                    <input type="range" name="" id="alpha" min="0" max="255">
-                    <p id="a-value" class="range-value-display">50</p>
+                    <div class="flex-row">
+                        <label for="red">Red</label>
+                        <input type="range" name="red" id="red" min="0" max="255">
+                        <p id="r-value" class="range-value-display">50</p>
+                    </div>
+                    <div class="flex-row">
+                        <label for="green">Green</label>
+                        <input type="range" name="" id="green" min="0" max="255">
+                        <p id="g-value" class="range-value-display">50</p>
+                    </div>
+                    <div class="flex-row">
+                        <label for="blue">Blue</label>
+                        <input type="range" name="" id="blue" min="0" max="255">
+                        <p id="b-value" class="range-value-display">50</p>
+                    </div>
+                    <div class="flex-row">
+                        <label for="alpha">Alpha</label>
+                        <input type="range" name="" id="alpha" min="0" max="255">
+                        <p id="a-value" class="range-value-display">50</p>
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>Position</legend>
         
-                    <label for="x">Horizontal Offset (X)</label>
-                    <input type="range" name="x" id="x" min="0" max="100">
-                    <p id="x-value" class="range-value-display">50</p>
-                    <label for="y">Vertical Offset (Y)</label>
-                    <input type="range" name="y" id="y" min="0" max="100">
-                    <p id="y-value" class="range-value-display">50</p>
-                    <label for="z">Depth Offset (Z)</label>
-                    <input type="range" name="z" id="z" min="0" max="100">
-                    <p id="z-value" class="range-value-display">50</p>
+                    <div class="flex-row">
+                        <label for="x">Horizontal Offset (X)</label>
+                        <input type="range" name="x" id="x" min="0" max="100">
+                        <p id="x-value" class="range-value-display">50</p>
+                    </div>
+                    <div class="flex-row">
+                        <label for="y">Vertical Offset (Y)</label>
+                        <input type="range" name="y" id="y" min="0" max="100">
+                        <p id="y-value" class="range-value-display">50</p>
+                    </div>
+                    <div class="flex-row">
+                        <label for="z">Depth Offset (Z)</label>
+                        <input type="range" name="z" id="z" min="0" max="100">
+                        <p id="z-value" class="range-value-display">50</p>
+                    </div>
+                </fieldset>
+
+                <br>
+                <h3>Presets</h3>
+                <fieldset>
+                  
+                    <input type="radio" name="preset" id="grass-field">
+                    <label for="grass-field">Grass Field</label>
+                    <br>
+                    <input type="radio" name="preset" id="neon-stripes">
+                    <label for="neon-stripes">Neon Stripes</label>
+                    <br>
+                    <input type="radio" name="preset" id="b-w">
+                    <label for="b-w">Black & White</label>
+                    <br>
+                    <input type="radio" name="preset" id="circle">
+                    <label for="circle">School Notebook</label>
+                    <br>
+                    <input type="radio" name="preset" id="circle">
+                    <label for="circle">School Notebook</label>
                 </fieldset>
                 <br><br><br><br><br><br>
         
         </aside>
 
         
-        <section id="wall">
-            <div id="frame"></div>
-            <button id="myButton">Generate Art</button>
-        </section>
+        <main>
+            <div id="canvas"></div>
+            <div id="cta-wrapper">
+                <button id="myButton">Generate Art</button>
+             </div>
+        </main>
     
 
 </body>
