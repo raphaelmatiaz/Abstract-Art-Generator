@@ -118,6 +118,7 @@ canvasBackgroundColor.addEventListener('input', () => {
 
     // PRESET CONSTANTS
     const presetNeonStripes = document.querySelector('#neon-stripes');
+    const presetTelescope = document.querySelector('#telescope');
     const presetTallGrass = document.querySelector('#tall-grass');
     const presetLimbo = document.querySelector('#limbo');
     const presetSketch = document.querySelector('#sketch');
@@ -143,6 +144,61 @@ canvasBackgroundColor.addEventListener('input', () => {
         let presetAlpha = 0;
         let x = 255;
         let y = 30;
+        let z = 50;
+
+        canvasBackgroundColor.value = presetCanvasBackgroundColor;
+        canvas.style.background = presetCanvasBackgroundColor;
+
+        inputShapeAmount.value = presetShapeAmount;
+        amountValue.textContent = presetShapeAmount;
+
+        inputMaxWidth.value = presetMaxWidth;
+        maxHeightValue.textContent = presetMaxWidth;
+
+        inputMaxHeight.value = presetMaxHeight;
+        maxHeightValue.textContent = presetMaxHeight;
+
+        inputRed.value = presetRed;
+        redValue.textContent = presetRed;
+
+        inputGreen.value = presetGreen;
+        greenValue.textContent = presetGreen;
+
+        inputBlue.value = presetBlue;
+        blueValue.textContent = presetBlue
+
+        inputAlpha.value = presetAlpha;
+        alphaValue.textContent = presetAlpha;
+
+        inputX.value = x;
+        xValue.textContent = x;
+
+        inputY.value = y;
+        yValue.textContent = y;
+
+        inputZ.value = z;
+        zValue.textContent = z;
+
+        generateArt();
+    })
+
+    // Telescope Preset
+    presetTelescope.addEventListener('input', () => {
+
+        canvas.style.width = '40vw';
+        canvas.style.height = '40vw';
+        canvas.style.borderRadius = '50%';
+
+        let presetCanvasBackgroundColor = 'rgb(0, 0, 0)';
+        let presetShapeAmount = 1000;
+        let presetMaxWidth = 2;
+        let presetMaxHeight = 2;
+        let presetRed = 255;
+        let presetGreen = 255;
+        let presetBlue = 255;
+        let presetAlpha = 255;
+        let x = 100;
+        let y = 100;
         let z = 50;
 
         canvasBackgroundColor.value = presetCanvasBackgroundColor;
@@ -297,13 +353,13 @@ canvasBackgroundColor.addEventListener('input', () => {
         canvas.style.height = '80%';
         canvas.style.borderRadius = '0';
 
-        let presetCanvasBackgroundColor = 'rgb(255, 255, 255)';
+        let presetCanvasBackgroundColor = 'rgb(237, 237, 237)';
         let presetShapeAmount = 19;
         let presetMaxWidth = 550;
         let presetMaxHeight = 525;
-        let presetRed = 0;
-        let presetGreen = 0;
-        let presetBlue = 0;
+        let presetRed = 10;
+        let presetGreen = 5;
+        let presetBlue = 10;
         let presetAlpha = 0;
         let x = 100;
         let y = 50;
@@ -344,6 +400,116 @@ canvasBackgroundColor.addEventListener('input', () => {
 
         generateArt();
 
+    })
+
+    // Sketch Preset
+    presetSketch.addEventListener('input', () => {
+
+        canvas.style.width = '30%';
+        canvas.style.height = '80%';
+        canvas.style.borderRadius = '0';
+
+        let presetCanvasBackgroundColor = 'rgb(255, 255, 255)';
+        let presetShapeAmount = 400;
+        let presetMaxWidth = 1;
+        let presetMaxHeight = 1000;
+        let presetRed = 255;
+        let presetGreen = 255;
+        let presetBlue = 255;
+        let presetAlpha = 255;
+        let x = 100;
+        let y = 10;
+        let z = 50;
+
+        canvasBackgroundColor.value = presetCanvasBackgroundColor;
+        canvas.style.background = presetCanvasBackgroundColor;
+
+        inputShapeAmount.value = presetShapeAmount;
+        amountValue.textContent = presetShapeAmount;
+
+        inputMaxWidth.value = presetMaxWidth;
+        maxHeightValue.textContent = presetMaxWidth;
+
+        inputMaxHeight.value = presetMaxHeight;
+        maxHeightValue.textContent = presetMaxHeight;
+
+        inputRed.value = presetRed;
+        redValue.textContent = presetRed;
+
+        inputGreen.value = presetGreen;
+        greenValue.textContent = presetGreen;
+
+        inputBlue.value = presetBlue;
+        blueValue.textContent = presetBlue
+
+        inputAlpha.value = presetAlpha;
+        alphaValue.textContent = presetAlpha;
+
+        inputX.value = x;
+        xValue.textContent = x;
+
+        inputY.value = y;
+        yValue.textContent = y;
+
+        inputZ.value = z;
+        zValue.textContent = z;
+
+        generateArt();
+    })
+
+    // Sketch Preset
+    presetAlienDialect.addEventListener('input', () => {
+
+        canvas.style.width = '80%';
+        canvas.style.height = '80%';
+        canvas.style.borderRadius = '0';
+
+        let presetCanvasBackgroundColor = 'rgb(255, 255, 255)';
+        let presetShapeAmount = 600;
+        let presetMaxWidth = 10;
+        let presetMaxHeight = 180;
+        let presetRed = 0;
+        let presetGreen = 0;
+        let presetBlue = 0;
+        let presetAlpha = 0;
+        let x = 100;
+        let y = 70;
+        let z = 50;
+
+        canvasBackgroundColor.value = presetCanvasBackgroundColor;
+        canvas.style.background = presetCanvasBackgroundColor;
+
+        inputShapeAmount.value = presetShapeAmount;
+        amountValue.textContent = presetShapeAmount;
+
+        inputMaxWidth.value = presetMaxWidth;
+        maxHeightValue.textContent = presetMaxWidth;
+
+        inputMaxHeight.value = presetMaxHeight;
+        maxHeightValue.textContent = presetMaxHeight;
+
+        inputRed.value = presetRed;
+        redValue.textContent = presetRed;
+
+        inputGreen.value = presetGreen;
+        greenValue.textContent = presetGreen;
+
+        inputBlue.value = presetBlue;
+        blueValue.textContent = presetBlue
+
+        inputAlpha.value = presetAlpha;
+        alphaValue.textContent = presetAlpha;
+
+        inputX.value = x;
+        xValue.textContent = x;
+
+        inputY.value = y;
+        yValue.textContent = y;
+
+        inputZ.value = z;
+        zValue.textContent = z;
+
+        generateArt();
     })
 
 // APP CONSTANTS
