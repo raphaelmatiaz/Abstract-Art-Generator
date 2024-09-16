@@ -1,4 +1,51 @@
 
+// Dark Mode
+const root = document.documentElement; //Get the HTML element
+const rootVariables = getComputedStyle(root); // Gets the root variables in CSS
+const main = document.querySelector('#main');
+const toggleDarkMode = document.querySelector('#dark-mode-toggle');
+
+// Dark Mode Event Lister
+toggleDarkMode.addEventListener('click', () => {
+
+    // console.log(toggleDarkMode.getAttribute('state'));
+
+    if (toggleDarkMode.getAttribute('state') == 'light-mode') {
+        console.log(`this is in ${toggleDarkMode.getAttribute('state')}.`)
+        toggleDarkMode.setAttribute('state', 'dark-mode')
+        console.log(`Switched to:  ${toggleDarkMode.getAttribute('state')}.`)
+        // main.style.backgroundColor = 'black';
+        root.style.setProperty('--color-primary', '#303030');
+        root.style.setProperty('--color-secondary', '#FFFFFF');
+        root.style.setProperty('--color-box-shadow-primary', '#000000');
+        root.style.setProperty('--color-canvas-box-shadow', '#000000');
+        root.style.setProperty('--color-border-primary', '#000000')
+        // document.getElementById('#controls').style.backgroundColor = '#000'
+
+    } 
+    else {
+        console.log(`this is in ${toggleDarkMode.getAttribute('state')}.`)
+        toggleDarkMode.setAttribute('state', 'light-mode')
+        console.log(`Switched to:  ${toggleDarkMode.getAttribute('state')}.`)
+        // main.style.backgroundColor = 'white';
+        root.style.setProperty('--color-primary', '#FFFFFF');
+        root.style.setProperty('--color-secondary', '#000000');
+    }
+
+//     if (toggleDarkMode.getAttribute('state') === 'light-mode') {
+
+//         main.style.backgroundColor = 'black';
+//         toggleDarkMode.setAttribute('state', 'dark-mode'); 
+//         console.log('123123')
+//     }
+//     else  {
+
+//         main.style.backgroundColor = 'black';
+//         toggleDarkMode.setAttribute('state', 'dark-mode'); 
+//         console.log('asd')
+// }
+})
+
 // =============== CONSTANTS + EVENT LISTNERS ===================
 
 

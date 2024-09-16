@@ -13,144 +13,142 @@
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
 </head>
+
 <body>
    
-
-       
-
-
-        <nav>
-            <h1 id="title">Abstract Art Generator</h1>
-        </nav>
-        <aside id="controls">
-            <div id="controls-wrapper">
-                <h2>Controls</h2>
-                <br>
-                <h3>Canvas</h3>
-                <fieldset>
-                    <legend>Format</legend>
-        
-                    <input type="radio" name="format" id="landscape" checked>
-                    <label for="landscape">Landscape</label>
-                    <br>
-                    <input type="radio" name="format" id="portrait">
-                    <label for="portrait">Portrait</label>
-                    <br>
-                    <input type="radio" name="format" id="square">
-                    <label for="square">Square</label>
-                    <br>
-                    <input type="radio" name="format" id="circle">
-                    <label for="circle">Circle</label>
-                </fieldset>
-                <fieldset>
-                    <legend>Background Color</legend>
-        
-                    <label for="color">Color</label>
-                    <input type="color" name="background-color" id="background-color" value="#FFFFFF">
-                </fieldset>
-                <br>
-                <h3>Shapes</h3>
-                <fieldset>
-                    <legend>General</legend>
-        
-                    <div class="flex-row">
-                        <label for="shapes-amount" title="The number of Shapes that will be generated on canvas">Amount</label>
-                        <input type="range" name="shapes-amount" id="shapes-amount" min="0" max="1000" value="50">
-                        <p id="amount-value" class="range-value-display">50</p>
-                    </div>
-                    <div class="flex-row">
-                        <label for="max-width">Max-Width</label>
-                        <input type="range" name="max-width" id="max-width" min="0" max="1000">
-                        <p id="max-width-value" class="range-value-display">50</p>
-                    </div>
-                    <div class="flex-row">
-                        <label for="max-height">Max-Height</label>
-                        <input type="range" name="max-height" id="max-height" min="0" max="1000">
-                        <p id="max-height-value" class="range-value-display">50</p>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Color (RGBA)</legend>
-        
-                    <div class="flex-row">
-                        <label for="red">Red</label>
-                        <input type="range" name="red" id="red" min="0" max="255">
-                        <p id="r-value" class="range-value-display">50</p>
-                    </div>
-                    <div class="flex-row">
-                        <label for="green">Green</label>
-                        <input type="range" name="" id="green" min="0" max="255">
-                        <p id="g-value" class="range-value-display">50</p>
-                    </div>
-                    <div class="flex-row">
-                        <label for="blue">Blue</label>
-                        <input type="range" name="" id="blue" min="0" max="255">
-                        <p id="b-value" class="range-value-display">50</p>
-                    </div>
-                    <div class="flex-row">
-                        <label for="alpha">Alpha</label>
-                        <input type="range" name="" id="alpha" min="0" max="255">
-                        <p id="a-value" class="range-value-display">50</p>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Position</legend>
-        
-                    <div class="flex-row">
-                        <label for="x">Horizontal Offset (X)</label>
-                        <input type="range" name="x" id="x" min="0" max="100">
-                        <p id="x-value" class="range-value-display">50</p>
-                    </div>
-                    <div class="flex-row">
-                        <label for="y">Vertical Offset (Y)</label>
-                        <input type="range" name="y" id="y" min="0" max="100">
-                        <p id="y-value" class="range-value-display">50</p>
-                    </div>
-                    <div class="flex-row">
-                        <label for="z">Depth Offset (Z)</label>
-                        <input type="range" name="z" id="z" min="0" max="100">
-                        <p id="z-value" class="range-value-display">50</p>
-                    </div>
-                </fieldset>
-
-                <br>
-                <h3>Presets</h3>
-                <fieldset>
-                  
-                    <input type="radio" name="preset" id="telescope">
-                    <label for="telescope">Telescope</label>
-                    <br>
-                    <input type="radio" name="preset" id="neon-stripes">
-                    <label for="neon-stripes">Neon Stripes</label>
-                    <br>
-                    <input type="radio" name="preset" id="tall-grass">
-                    <label for="tall-grass">Tall Grass</label>
-                    <br>
-                    <input type="radio" name="preset" id="emoji">
-                    <label for="emoji">Emoji</label>
-                    <br>
-                    <input type="radio" name="preset" id="limbo">
-                    <label for="limbo">Limbo</label>
-                    <br>
-                    <input type="radio" name="preset" id="sketch">
-                    <label for="sketch">Sketch</label>
-                    <br>
-                    <input type="radio" name="preset" id="alien-dialect">
-                    <label for="alien-dialect">Alien Dialect</label>
-                    <br>
-                </fieldset>
-                <br><br><br><br><br><br>
-        
-        </aside>
-
-        
-        <main>
-            <div id="canvas"></div>
-            <div id="cta-wrapper">
-                <button id="myButton">Generate Art</button>
-             </div>
-        </main>
+    <button id="dark-mode-toggle" state="light-mode">Toggle</button>
+    <nav>
+        <h1 id="title">Abstract Art Generator</h1>
+    </nav>
+    <aside id="controls">
+        <div id="controls-wrapper">
+            <h2>Controls</h2>
+            <br>
+            <h3>Canvas</h3>
+            <fieldset>
+                <legend>Format</legend>
     
+                <input type="radio" name="format" id="landscape" checked>
+                <label for="landscape">Landscape</label>
+                <br>
+                <input type="radio" name="format" id="portrait">
+                <label for="portrait">Portrait</label>
+                <br>
+                <input type="radio" name="format" id="square">
+                <label for="square">Square</label>
+                <br>
+                <input type="radio" name="format" id="circle">
+                <label for="circle">Circle</label>
+            </fieldset>
+            <fieldset>
+                <legend>Background Color</legend>
+    
+                <label for="color">Color</label>
+                <input type="color" name="background-color" id="background-color" value="#FFFFFF">
+            </fieldset>
+            <br>
+            <h3>Shapes</h3>
+            <fieldset>
+                <legend>General</legend>
+    
+                <div class="flex-row">
+                    <label for="shapes-amount" title="The number of Shapes that will be generated on canvas">Amount</label>
+                    <input type="range" name="shapes-amount" id="shapes-amount" min="0" max="1000" value="50">
+                    <p id="amount-value" class="range-value-display">50</p>
+                </div>
+                <div class="flex-row">
+                    <label for="max-width">Max-Width</label>
+                    <input type="range" name="max-width" id="max-width" min="0" max="1000">
+                    <p id="max-width-value" class="range-value-display">50</p>
+                </div>
+                <div class="flex-row">
+                    <label for="max-height">Max-Height</label>
+                    <input type="range" name="max-height" id="max-height" min="0" max="1000">
+                    <p id="max-height-value" class="range-value-display">50</p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Color (RGBA)</legend>
+    
+                <div class="flex-row">
+                    <label for="red">Red</label>
+                    <input type="range" name="red" id="red" min="0" max="255">
+                    <p id="r-value" class="range-value-display">50</p>
+                </div>
+                <div class="flex-row">
+                    <label for="green">Green</label>
+                    <input type="range" name="" id="green" min="0" max="255">
+                    <p id="g-value" class="range-value-display">50</p>
+                </div>
+                <div class="flex-row">
+                    <label for="blue">Blue</label>
+                    <input type="range" name="" id="blue" min="0" max="255">
+                    <p id="b-value" class="range-value-display">50</p>
+                </div>
+                <div class="flex-row">
+                    <label for="alpha">Alpha</label>
+                    <input type="range" name="" id="alpha" min="0" max="255">
+                    <p id="a-value" class="range-value-display">50</p>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Position</legend>
+    
+                <div class="flex-row">
+                    <label for="x">Horizontal Offset (X)</label>
+                    <input type="range" name="x" id="x" min="0" max="100">
+                    <p id="x-value" class="range-value-display">50</p>
+                </div>
+                <div class="flex-row">
+                    <label for="y">Vertical Offset (Y)</label>
+                    <input type="range" name="y" id="y" min="0" max="100">
+                    <p id="y-value" class="range-value-display">50</p>
+                </div>
+                <div class="flex-row">
+                    <label for="z">Depth Offset (Z)</label>
+                    <input type="range" name="z" id="z" min="0" max="100">
+                    <p id="z-value" class="range-value-display">50</p>
+                </div>
+            </fieldset>
+
+            <br>
+            <h3>Presets</h3>
+            <fieldset>
+                
+                <input type="radio" name="preset" id="telescope">
+                <label for="telescope">Telescope</label>
+                <br>
+                <input type="radio" name="preset" id="neon-stripes">
+                <label for="neon-stripes">Neon Stripes</label>
+                <br>
+                <input type="radio" name="preset" id="tall-grass">
+                <label for="tall-grass">Tall Grass</label>
+                <br>
+                <input type="radio" name="preset" id="emoji">
+                <label for="emoji">Emoji</label>
+                <br>
+                <input type="radio" name="preset" id="limbo">
+                <label for="limbo">Limbo</label>
+                <br>
+                <input type="radio" name="preset" id="sketch">
+                <label for="sketch">Sketch</label>
+                <br>
+                <input type="radio" name="preset" id="alien-dialect">
+                <label for="alien-dialect">Alien Dialect</label>
+                <br>
+            </fieldset>
+            <br><br><br><br><br><br>
+    
+    </aside>
+
+    
+    <main id="main">
+        <div id="canvas"></div>
+        <div id="cta-wrapper">
+            <button id="myButton">Generate Art</button>
+            </div>
+    </main>
+
 
 </body>
 </html>
