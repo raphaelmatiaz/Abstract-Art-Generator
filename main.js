@@ -1,4 +1,6 @@
 
+
+
 // Dark Mode
 const root = document.documentElement; //Get the HTML element
 const rootVariables = getComputedStyle(root); // Gets the root variables in CSS
@@ -30,20 +32,10 @@ toggleDarkMode.addEventListener('click', () => {
         // main.style.backgroundColor = 'white';
         root.style.setProperty('--color-primary', '#FFFFFF');
         root.style.setProperty('--color-secondary', '#000000');
+        root.style.setProperty('--color-box-shadow-primary', '#cacaca');
+        root.style.setProperty('--color-canvas-box-shadow', '#3c3c3c');
+        root.style.setProperty('--color-border-primary', '#8f8f8f')
     }
-
-//     if (toggleDarkMode.getAttribute('state') === 'light-mode') {
-
-//         main.style.backgroundColor = 'black';
-//         toggleDarkMode.setAttribute('state', 'dark-mode'); 
-//         console.log('123123')
-//     }
-//     else  {
-
-//         main.style.backgroundColor = 'black';
-//         toggleDarkMode.setAttribute('state', 'dark-mode'); 
-//         console.log('asd')
-// }
 })
 
 // =============== CONSTANTS + EVENT LISTNERS ===================

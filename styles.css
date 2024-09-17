@@ -5,6 +5,8 @@
     --color-box-shadow-secondary: #000000;
     --color-canvas-box-shadow: #3c3c3c;
     --color-border-primary: #8f8f8f;
+    --color-webkit-scrollbar-primary: #c1c1c1;
+    --color-webkit-scrollbar-background-primary: #f1f1f1;
   }
 
 
@@ -15,9 +17,28 @@
     padding: 0;
 }
 
+
+/*Scrollbar*/
+
+/*Firefox*/
+/* html {
+    scrollbar-width: normal;
+    scrollbar-color: var(--color-webkit-scrollbar-primary) var(--color-webkit-scrollbar-background-primary);
+} */
+
+html::-webkit-scrollbar {
+    width: 1px;
+    background: var(--color-webkit-scrollbar-background-primary);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: red; /* Color of the scrollbar handle */
+    border-radius: 6px; /* Rounded corners for the handle */
+  }
+
 html {
     font-size: 62.5%;
-    font-family: 'Inter',Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Inter', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -36,7 +57,7 @@ body {
 nav {
     position: absolute;
     z-index: 302;
-    min-width: 100vw;
+    min-width: 22vw;
     height: 8vh;
     top: 0;
     left: 0;
@@ -119,8 +140,8 @@ fieldset {
     z-index: 300;
     background-color: var(--color-primary);
     flex: 1;
-    border-right: 1px solid rgb(156, 156, 156);
-    box-shadow: 0px 0 20px rgb(202, 202, 202);
+    border-right: 1px solid var(--color-border-primary);
+    box-shadow: 0px 0 20px var(--color-box-shadow-primary);
     padding: 20px;
     top: 8vh;
     margin-top: 8vh;
@@ -135,11 +156,6 @@ fieldset {
     position: absolute;
     z-index: 200;
 }
-
-#wall {
-    flex: 4;
-}
-
 
 main {
     position: relative;
@@ -172,6 +188,11 @@ main {
     z-index: 500;
     top: 10px;
     right: 10px;
+    background-image: url(./media/darkmode.svg);
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
 }
 
 .range-value-display {
@@ -190,4 +211,25 @@ main {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 4px;
+}
+
+.layer {
+    border: 1px solid var(--color-secondary);
+    border-collapse: collapse;
+    min-width: 20vw;
+    box-shadow: 0px 0px 1px var(--color-box-shadow-primary);
+    padding: 4px;
+}
+
+.layer:hover {
+    cursor: pointer;
+}
+
+.delete-layer {
+    border-radius: 50%;
+    border: 1px solid var(--color-secondary);
+    padding: 2px;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
 }
